@@ -1,3 +1,4 @@
+import { Form } from "react-bootstrap";
 const Events = (props) => {
   function handleClick() {
     console.log("bosildi");
@@ -18,10 +19,16 @@ const Events = (props) => {
   return (
     <div>
       <button onClick={handleClick}>Meni bos</button>
-      <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} placeholder="Card Number" />
-        <button type="submit">Jo'natish</button>
-      </form>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group>
+          <Form.Control
+            type="text"
+            onChange={handleChange}
+            placeholder="Card Number"
+          />
+          <button type="submit">Jo'natish</button>
+        </Form.Group>
+      </Form>
     </div>
   );
 };
