@@ -1,11 +1,24 @@
 // import styles from "./button.module.css";
 import { Button as BSButton } from "react-bootstrap";
+import styled from "styled-components";
+
+const StyledButton = styled(BSButton)`
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.5);
+  }
+
+  span {
+    background: green;
+  }
+`;
 
 const Button = () => {
   return (
-    <BSButton variant="danger" size="lg">
+    <StyledButton variant="danger" size="lg">
       Button
-    </BSButton>
+      <span>a</span>
+    </StyledButton>
   );
 };
 
