@@ -17,7 +17,9 @@ const Button = () => {
   return (
     <StyledButton variant="danger" size="lg">
       Button
-      <span>a</span>
+      <span className="maxsus-span">
+        a
+      </span>
     </StyledButton>
   );
 };
